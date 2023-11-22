@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #ffffff;
+  --bg_body: #f0f9ff;
+  --lines-color: #dddddd;
+  --body-text: #333333;
+  --heart-color: #dc143c;
+  --stars-color: #ec9618;
+  --main-padding: 60px;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background-color: inherit;
+  color: inherit;
+}
+
+.darkmode {
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #1a1a1a;
+  --bg_body: #282828;
+  --lines-color: #000000;
+  --body-text: #ededed;
+  --heart-color: #dc143c;
+  --stars-color: #e5981a;
+}
+
+.main-container {
+  padding: 30px 0;
+}
+
+.container {
+  width: 40%;
+  margin-inline: 15% 45%;
+}
+
+.trim-1line {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--body-text);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.website-header {
+  justify-content: space-between;
+  background-color: var(--bg_default);
+  height: 82px;
+  padding-inline: 60px;
+}
+
+header h1 {
+  color: var(--brand-primary);
+  font-size: 28px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+nav ul {
+  list-style: none;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+nav ul li button {
+  border: 1.5px solid var(--lines-color);
+  border-radius: 5px;
+  justify-content: center;
+  width: 130px;
+  height: 35px;
+  gap: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+nav li button ion-icon {
+  font-size: 1rem;
+}
+nav li button:hover {
+  background-color: var(--brand-secondary);
+  cursor: pointer;
+}
+.welcome {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: var(--bg_default);
+  height: 130px;
+  width: 100vw;
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60%;
+}
+.triangle1 {
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    var(--brand-primary),
+    var(--brand-secondary)
+  );
+  clip-path: polygon(0% 0%, 90% 0%, 0% 100%);
+  z-index: 2;
+}
+
+.triangle2 {
+  right: 0;
+  background-color: var(--brand-secondary);
+  clip-path: polygon(10% 00%, 100% 100%, 100% 00%);
+}
+
+.welcome h2 {
+  color: var(--brand-secondary);
+  font-weight: 800;
+  font-size: 25px;
+  margin-top: 55px;
+}
+
+.welcome h3 {
+  font-weight: 400;
+  opacity: 0.8;
+  font-size: 1.2rem;
+  margin-top: -5px;
+}
+
+main {
+  position: relative;
+  background-color: var(--bg_body);
+}
+
+.language-article {
+  background-color: var(--body-text);
+  color: var(--bg_default);
+}
+.language-article h2 {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--brand-secondary);
+}
+.language-article h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+.stars ion-icon {
+  color: var(--stars-color);
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.stars {
+  margin-top: auto;
+  display: flex;
+  gap: -3px;
+}
+.language-article p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.sub-topics {
+  background-color: var(--bg_body);
+}
+
+.table {
+  background-color: var(--bg_default);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.table h2 {
+  font-size: 28px;
+  border: 1px solid var(--lines-color);
+  padding: 20px 35px;
+  font-weight: 700;
+}
+.table ul {
+  list-style: none;
+}
+.table ul li {
+  border: 1px solid var(--lines-color);
+  padding: 20px 35px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.table ul li ion-icon {
+  color: var(--brand-secondary);
+  font-size: 28px;
+  flex-shrink: 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 15%;
+  top: 30px;
+  background-color: var(--bg_default);
+  width: 380px;
+  box-shadow: 0px 0px 2px 1px var(--lines-color);
+}
+
+.card a {
+  color: var(--brand-primary);
+}
+
+.card-des {
+  padding: 20px;
+}
+
+.card h3 {
+  margin-bottom: 20px;
+}
+
+.card-des2 {
+  border: 1px solid var(--lines-color);
+  text-align: center;
+  padding: 30px 20px 20px 20px;
+}
+
+.card-des2 h4 {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.card button {
+  padding: 15px;
+  background-color: var(--brand-secondary);
+  color: var(--bg_default);
+  border: none;
+  font-size: 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card button ion-icon {
+  font-size: 38px;
+}
+
+.card-des2 p {
+  opacity: 0.5;
+  margin-top: 10px;
+}
+
+.card img {
+  object-fit: cover;
+  margin: auto;
+  width: 99%;
+  height: 100%;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--bg_body);
+  padding: 2em;
+}
+
+footer ion-icon {
+  color: var(--heart-color);
+  font-size: 2rem;
+  position: relative;
+  top: 8px;
+}
+
+
+
+.card button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg_body);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lines-color);
+  height: 500px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1270px) {
+.container{
+    width: 45%;
+    margin-left: 5%;
+  }
+  .card {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+  .small-container{
+    padding-inline: 20px;
+  }
+  .card {
+    position: static;
+    width: calc(100% - 40px);
+    margin: auto;
+  }
+  .card img {
+    object-fit: cover;
+  }
+
+  .triangle1,
+  .triangle2 {
+    height: 40%;
+  }
+}
+
+@media screen and (max-width: 606px) {
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .welcome {
+    height: auto;
+  }
+  nav li span {
+    display: none;
+  }
+  nav ul li button {
+    width: 50px;
+  }
+  
+  .welcome h2 {
+    margin-top: 30px;
+  }
+  .triangle1,
+  .triangle2 {
+    height: 20%;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+  }
+
+  
+}
