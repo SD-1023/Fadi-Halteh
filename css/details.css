@@ -36,7 +36,8 @@ select {
   --stars-color: #e5981a;
 }
 
-.main-container {
+.language-article,
+.sub-topics {
   padding: 30px 0;
 }
 
@@ -67,7 +68,12 @@ body {
   justify-content: space-between;
   background-color: var(--bg_default);
   height: 82px;
-  padding-inline: 60px;
+  padding-inline: var(--main-padding);
+}
+
+header a {
+  text-decoration: none;
+  text-transform: none;
 }
 
 header h1 {
@@ -147,7 +153,7 @@ nav li button:hover {
   margin-top: -5px;
 }
 
-main {
+.summary {
   position: relative;
   background-color: var(--bg_body);
 }
@@ -156,15 +162,18 @@ main {
   background-color: var(--body-text);
   color: var(--bg_default);
 }
+
 .language-article h2 {
   font-weight: 500;
   font-size: 18px;
   color: var(--brand-secondary);
 }
+
 .language-article h3 {
   font-size: 28px;
   font-weight: 700;
 }
+
 .stars ion-icon {
   color: var(--stars-color);
   margin: 0;
@@ -176,6 +185,7 @@ main {
   display: flex;
   gap: -3px;
 }
+
 .language-article p {
   margin-top: 20px;
   font-size: 18px;
@@ -190,6 +200,7 @@ main {
   border-radius: 10px;
   overflow: hidden;
 }
+
 .table h2 {
   font-size: 28px;
   border: 1px solid var(--lines-color);
@@ -274,8 +285,64 @@ main {
 .card img {
   object-fit: cover;
   margin: auto;
-  width: 99%;
+  width: 100%;
   height: 100%;
+  border: 2px solid #ffffff;
+}
+
+.favourites {
+  padding-inline: var(--main-padding);
+  height: 210px;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--bg_default);
+  z-index: 99;
+  box-shadow: 0px 0px 7px 1px var(--lines-color);
+  display: none;
+}
+
+.favourites h3 {
+  margin: 15px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+.favourite-card-containrer {
+  
+  overflow-x: auto;
+  display: flex;
+  gap: 20px;
+}
+.favourite-card {
+  border-radius: 5px;
+  width: 140px;
+  height: 130px;
+  box-shadow: 0px 0px 7px 0px var(--lines-color);
+  font-size: 0.8rem;
+  flex: none;
+  margin: 5px 2px;
+}
+
+.favourite-card img {
+  object-fit: cover;
+  height: 50%;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.favourite-card h4 {
+  font-weight: 700;
+  margin-left: 5px;
+  font-size: 1.1rem;
+}
+
+.favourite-card .stars {
+  margin-left: 5px;
+}
+
+.favourite-card-containrer::-webkit-scrollbar-thumb {
+  height: 5px;
+  width: 5px;
 }
 
 footer {
@@ -290,8 +357,6 @@ footer ion-icon {
   position: relative;
   top: 8px;
 }
-
-
 
 .card button:hover {
   cursor: pointer;
@@ -313,12 +378,12 @@ footer ion-icon {
 }
 
 @media screen and (max-width: 1270px) {
-.container{
+  .container {
     width: 45%;
-    margin-left: 5%;
+    margin-left: var(--main-padding);
   }
   .card {
-    right: 5%;
+    right: var(--main-padding);
   }
 }
 
@@ -327,7 +392,7 @@ footer ion-icon {
     width: 100%;
     margin: 0;
   }
-  .small-container{
+  .small-container {
     padding-inline: 20px;
   }
   .card {
@@ -346,7 +411,6 @@ footer ion-icon {
 }
 
 @media screen and (max-width: 606px) {
-
   header h1 {
     font-size: 20px;
   }
@@ -360,7 +424,7 @@ footer ion-icon {
   nav ul li button {
     width: 50px;
   }
-  
+
   .welcome h2 {
     margin-top: 30px;
   }
@@ -372,6 +436,4 @@ footer ion-icon {
   header h2 {
     font-size: 1.2rem;
   }
-
-  
 }

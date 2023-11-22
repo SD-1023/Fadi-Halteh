@@ -1,6 +1,5 @@
 let mode = window.localStorage.getItem("darkMode");
 let darkBtn = document.querySelector("[name=dark-mode]");
-let whiteBacks = document.querySelectorAll(".white");
 let article = document.querySelector("article");
 let card = document.querySelector(".card");
 let heartBtn = document.querySelector(".card-des2 button");
@@ -11,10 +10,7 @@ if (mode === "enabled") {
     "background-color: var(--body-text);color:var(--lines-color)";
   heartBtn.style.cssText = "color: var(--body-text)";
   article.style.cssText = "background-color: #333;color:var(--body-text)";
-  whiteBacks.forEach((back) => {
-    back.style.cssText = "background-color: var(--body-text);";
-    article.style.cssText = "background-color: #333;color:var(--body-text)";
-  });
+  
 }
 
 darkBtn.addEventListener("click", () => {
@@ -27,9 +23,7 @@ darkBtn.addEventListener("click", () => {
     card.style.cssText =
       "background-color: var(--body-text);color:var(--lines-color)";
     article.style.cssText = "background-color: #333;color:var(--body-text)";
-    whiteBacks.forEach((back) => {
-      back.style.cssText = "background-color: var(--body-text);";
-    });
+   
   } else {
     document.body.classList.remove("darkmode");
     localStorage.setItem("darkMode", null);
@@ -38,9 +32,7 @@ darkBtn.addEventListener("click", () => {
       "color: var(--body-text);backgorund-color:var(--lines-color)";
     darkBtn.style.cssText = "background-color: var(--bg_default)";
     heartBtn.style.cssText = "color: var(--bg_default)";
-    whiteBacks.forEach((back) => {
-      back.style.cssText = "background-color: var(--bg_body);";
-    });
+    
   }
 });
 
@@ -54,7 +46,6 @@ if (favourites === "enabled") {
 }
 favBtn.addEventListener("click", () => {
   let favBar = document.querySelector(".favourites");
-  console.log(favBar);
   let favourites = localStorage.getItem("favourites");
   if (favourites !== "enabled") {
     favBar.style.display = "block";
@@ -67,3 +58,17 @@ favBtn.addEventListener("click", () => {
   }
 });
 
+heartBtn.addEventListener("click", () => {
+  let favBar = document.querySelector(".favourite-card-containrer");
+  favBar.innerHTML += `<div class="favourite-card">
+  <img id="javascript" src="../imgs/javascript.jpg" alt="javascript" />
+  <h4 class="trim-1line">JavaScript</h4>
+  <div class="stars">
+    <ion-icon name="star"></ion-icon>
+    <ion-icon name="star"></ion-icon>
+    <ion-icon name="star"></ion-icon>
+    <ion-icon name="star"></ion-icon>
+    <ion-icon name="star-outline"></ion-icon>
+  </div>
+</div> `;
+});

@@ -355,8 +355,21 @@ nav li button:hover,
   width: 5px;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg_body);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lines-color);
+  height: 500px;
+  border-radius: 5px;
+}
 .white-bg {
-  background-color: var(--bg_default);
+  background-color: #ffffff;
 }
 @media screen and (max-width: 900px) {
   .search .input-field {
