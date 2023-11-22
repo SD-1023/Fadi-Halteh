@@ -58,17 +58,24 @@ favBtn.addEventListener("click", () => {
   }
 });
 
+let javaCardHtml=`<div class="favourite-card">
+<img id="javascript" src="../imgs/javascript.jpg" alt="javascript" />
+<h4 class="trim-1line">JavaScript</h4>
+<div class="stars">
+  <ion-icon name="star"></ion-icon>
+  <ion-icon name="star"></ion-icon>
+  <ion-icon name="star"></ion-icon>
+  <ion-icon name="star"></ion-icon>
+  <ion-icon name="star-outline"></ion-icon>
+</div>
+</div> `
+let javaCard = localStorage.getItem("javaCard")
+if (javaCard){
+  let favBar = document.querySelector(".favourite-card-containrer");
+  favBar.innerHTML += javaCardHtml;
+}
 heartBtn.addEventListener("click", () => {
   let favBar = document.querySelector(".favourite-card-containrer");
-  favBar.innerHTML += `<div class="favourite-card">
-  <img id="javascript" src="../imgs/javascript.jpg" alt="javascript" />
-  <h4 class="trim-1line">JavaScript</h4>
-  <div class="stars">
-    <ion-icon name="star"></ion-icon>
-    <ion-icon name="star"></ion-icon>
-    <ion-icon name="star"></ion-icon>
-    <ion-icon name="star"></ion-icon>
-    <ion-icon name="star-outline"></ion-icon>
-  </div>
-</div> `;
+  favBar.innerHTML += javaCardHtml;
+  localStorage.setItem("javaCard","enabled")
 });
