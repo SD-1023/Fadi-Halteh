@@ -44,7 +44,7 @@ favBtn.addEventListener("click", () => {
   }
 });
 let javaCardHtml=`<div class="favourite-card">
-<img id="javascript" src="../imgs/javascript.jpg" alt="javascript" />
+<img id="javascript" src="./imgs/javascript.jpg" alt="javascript" />
 <h4 class="trim-1line">JavaScript</h4>
 <div class="stars">
   <ion-icon name="star"></ion-icon>
