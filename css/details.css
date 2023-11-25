@@ -195,23 +195,23 @@ nav li button:hover {
   background-color: var(--bg_body);
 }
 
-.table {
+.table-checklist {
   background-color: var(--bg_default);
+  border: 2px solid var(--lines-color);
   border-radius: 10px;
   overflow: hidden;
 }
 
-.table h2 {
+.table-checklist h2 {
   font-size: 28px;
-  border: 1px solid var(--lines-color);
   padding: 20px 35px;
   font-weight: 700;
 }
-.table ul {
+.table-checklist ul {
   list-style: none;
 }
-.table ul li {
-  border: 1px solid var(--lines-color);
+.table-checklist ul li {
+  border-top: 2px solid var(--lines-color);
   padding: 20px 35px;
   font-size: 20px;
   display: flex;
@@ -219,7 +219,7 @@ nav li button:hover {
   gap: 20px;
 }
 
-.table ul li ion-icon {
+.table-checklist ul li ion-icon {
   color: var(--brand-secondary);
   font-size: 28px;
   flex-shrink: 0;
